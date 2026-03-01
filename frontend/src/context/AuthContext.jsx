@@ -1,9 +1,8 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
 
-// Set base URL for production - uses environment variable or fallback to render backend
-const baseURL =
-  import.meta.env?.VITE_API_URL || "https://villabackend.onrender.com";
+// Set base URL - hardcoded for production to ensure it works
+const baseURL = "https://villabackend.onrender.com";
 axios.defaults.baseURL = baseURL;
 console.log("API Base URL:", baseURL);
 
