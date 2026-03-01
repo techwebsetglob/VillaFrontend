@@ -1,39 +1,6 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Home = ({ villas, loading }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [royaltyIndex, setRoyaltyIndex] = useState(0);
-
-  const heroImages = [
-    "images/mountain sky villa/IMG-20250708-WA0099.jpg",
-    "images/vrundavan villa/IMG-20250516-WA0034.jpg",
-    "images/mountain sky villa/IMG-20250708-WA0115.jpg",
-    "images/vrundavan villa/IMG-20250517-WA0091.jpg",
-    "images/mountain sky villa/IMG-20250708-WA0126.jpg",
-  ];
-
-  const royaltyImages = [
-    "images/mountain sky villa/IMG-20250708-WA0099.jpg",
-    "images/mountain sky villa/IMG-20250708-WA0115.jpg",
-    "images/mountain sky villa/IMG-20250708-WA0135.jpg",
-    "images/vrundavan villa/IMG-20250516-WA0034.jpg",
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setRoyaltyIndex((prev) => (prev + 1) % royaltyImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
   const amenities = [
     { icon: "fa-wifi", label: "FREE WIFI" },
     { icon: "fa-fire", label: "BARBEQUE PROVISION" },
@@ -100,15 +67,15 @@ const Home = ({ villas, loading }) => {
 
   return (
     <>
-      {/* Hero Section */}
+      {/* Hero Section with Static Image */}
       <section className="hero-ekostay">
         <div className="hero-slideshow">
-          {heroImages.map((img, index) => (
-            <div
-              key={index}
-              className={`hero-slide ${index === currentSlide ? "active" : ""}`}
-              style={{ backgroundImage: `url('${img}')` }}></div>
-          ))}
+          <div
+            className="hero-slide active"
+            style={{
+              backgroundImage:
+                "url('images/mountain sky villa/IMG-20250708-WA0099.jpg')",
+            }}></div>
         </div>
         <div className="hero-overlay"></div>
         <div className="hero-content">
