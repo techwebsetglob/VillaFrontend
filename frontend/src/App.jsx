@@ -1,6 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+
+// Set base URL for all API calls - Point to Render backend
+axios.defaults.baseURL = "https://villabackend.onrender.com";
+
 import { useAuth } from "./context/AuthContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
