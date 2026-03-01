@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 
 const GOOGLE_CLIENT_ID =
-  "1088929392230-04sd1iq2vo958ed2h4k8hq4225e2nlik.apps.googleusercontent.com";
+  "1088929392230-tajh08in72goqhp3gr588rrvbutfjj1v.apps.googleusercontent.com";
 
 // Country codes list
 const countryCodes = [
